@@ -1,0 +1,521 @@
+
+
+
+
+*{
+  margin:0px;
+  padding:0px;
+  border:0px;
+  font-family: sans-serif;
+  /* overflow-x: hidden; */
+}
+
+#wholecontainer{
+  width:100vw;
+  height:100%;
+  background-color: rgb(63, 61, 61);
+  color:white;
+  /* overflow-y: scroll; */
+  overflow-x: hidden;
+  /* overflow-x: hidden; */
+}
+#Nav1{
+  display:flex;
+  background-color: rgb(222, 221, 214);
+  padding:8px 10px 8px 10px;
+  justify-content: end;
+  color:black;
+}
+#Nav1 > div{
+  font-size: 15px;
+  font-weight:bold;
+  margin-right:25px;
+  padding:5px 14px 5px 14px;
+  cursor:pointer;
+}
+#logbut{
+  border:1px solid black;
+  border-radius: 5px;
+  padding:3px 3px 3px 3px;
+}
+#langbut{
+  display:flex;
+}
+#pagelangmenus{
+  width:110px;
+  position: absolute;
+  border-radius: 5px;
+  height:68px;
+  background-color: rgb(244, 192, 3);
+  color:black;
+  /* padding:10px 10px 10px 10px; */
+  margin-left: 1320px;  
+  text-align: center;
+}
+#sharpdesignPagelangmenu{
+  width:0px;
+  height:0px;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 20px solid rgb(244, 192, 3) ;
+  position: absolute;
+  margin:-17px 0px 0px 1370px;
+}
+#pagelangmenus div{
+  padding:5px 5px 5px 5px;
+  width:100%;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+  color:black;
+  /* background-color: aquamarine; */
+}
+.PLmbutinactive{
+  #pagelangbox{
+    display: none;
+  }
+}
+.PLmbutactive{
+  #pagelangbox{
+    display:block;
+  }
+}
+#langbut ion-icon{
+  font-size: 20px;
+}
+#Nav2{
+  display:flex;
+  justify-content: space-between;
+  padding:10px 10px 20px 10px;
+  height:75px;
+  background-color: rgb(74, 74, 74);
+  font-size: 20px;
+}
+#logo{
+  margin:10px 0px 0px 30px;
+}
+#logo img{
+  width:130px;
+  /* margin-top: 0px; */
+  /* height:0px; */
+}
+#Nav2 #menus{
+  display: flex;
+  padding-top: 5px;
+  font-weight: bold;
+
+  /* justify-content: space-around; */
+}
+#menulines ion-icon{
+  font-size: 22px;
+  margin:10px 20px 0px 10px;
+  display: none;
+}
+#menus #lists{
+  display:flex;
+  margin-right: 30px;
+
+}
+#lists div{
+  padding:10px 10px 5px 10px;
+  cursor: pointer;
+}
+#stlearnbut{
+  padding:10px 35px 15px 35px;
+  margin-right: 20px;
+  text-align: center;
+  background-color:rgb(244, 192, 3) ;
+  border-radius: 10px;
+  color:black;
+  cursor: pointer;
+  height:45px;
+  font-weight: bold;
+  /* opacity: 0.8; */
+  
+}
+.Cmbutinactive{
+  #coursemenucontainer{
+    display: none;
+  }
+}
+.Cmbutactive{
+  #coursemenucontainer{
+    display: block;
+  }
+}
+#coursemenucontainer{
+  width:200px;
+  height:222px;
+  background-color: aliceblue;
+  color:black;
+  margin:10px 0px 0px 850px;
+  /* padding:10px 20px 10px 20px; */
+  text-align: center;
+  border-radius: 10px;
+  background-color:rgb(224, 220, 204);
+  z-index: 3;
+  position: absolute;
+}
+#coursemenucontainer .col div{
+   padding:10px 10px 10px 10px;
+   cursor: pointer;
+   border-bottom: 1px solid black;
+}
+#coursemenucontainer .col div:active{
+  color:aliceblue;
+  /* background-color: azure; */
+
+}
+/* #coursemenucontainer .col{
+  margin-left: 0px;
+} */
+#coursedesign{
+  width:0;
+  height:0;
+  /* background-color:rgb(244, 192, 3); */
+  position: absolute;
+  margin:-245px 0px 0px 90px;
+  border-left:12px solid transparent;
+  border-right:12px solid transparent;
+  border-bottom:25px solid rgb(224, 220,204);
+  /* z-index: 1; */
+}
+#coursemenubut:active{
+     color:rgb(145, 142, 142);
+}
+#loginpage{
+  padding:0px;
+  margin:0px;
+  border:0px;
+}
+#logincontainer{
+  
+  background-color: rgb(221, 222, 223);
+  height:100vh;
+  width:100vw;
+  /* padding:10px 20px 10px 20px; */
+  /* background-color: ; */
+}
+#loginbox{
+   margin:100px 0px 0px 500px;
+   width:380px;
+   height:450px;
+   background-color: rgb(242, 242, 240);
+   padding:20px 20px 20px 20px;
+   border-radius: 7px;
+}
+#Registerbox{
+   margin:20px 0px 0px 500px;
+   width:380px;
+   height:580px;
+   background-color: rgb(242, 242, 240);
+   padding:20px 20px 20px 20px;
+   border-radius: 7px;
+   position: absolute;
+}
+.Regpageinactive{
+  #Registerbox{
+    display: none;
+  }
+}
+.Regpageactive{
+  #Registerbox{
+    display: block;
+  }
+}
+.Loginpageinactive{
+  #loginbox{
+    display: none;
+  }
+
+}
+.Loginpageactive{
+  #loginbox{
+    display: block;
+  }
+}
+
+.label{
+  width:100px;
+  font-weight: 700;
+}
+
+#loginpagenav{
+  display: flex;
+  background-color: rgb(74, 74, 74);
+  height:55px;
+  width:100vw;
+  padding:10px 20px 10px 20px;
+  color: white;
+}
+#Registerpageswitch{
+  margin:0px 0px 10px 50px;
+}
+#Loginpageswitch{
+  margin:0px 0px 10px 50px;
+}
+#loghomepagebut{
+  margin-left: 1300px;
+}
+#loginbox input{
+  width:300px;
+  height:35px;
+  padding:3px 3px 3px 3px;
+}
+#loginbox div{
+  /* display: flex; */
+  margin-top: 20px;
+}
+#containerloginbut{
+  width:60px;
+  height:40px;
+  border:1px solid black;
+  padding:5px 10px 10px 10px;
+  border-radius: 5px;
+  background-color: rgb(125, 180, 162);
+  margin-left: 140px;
+  color:white;
+  cursor: pointer;
+
+}
+#Registerbox input{
+  width:300px;
+  height:35px;
+  padding:3px 3px 3px 3px;
+}
+#Registerbox div{
+  /* display: flex; */
+  margin-top: 20px;
+}
+#containerRegisterbut{
+  width:80px;
+  height:40px;
+  border:1px solid black;
+  padding:5px 10px 10px 10px;
+  border-radius: 5px;
+  background-color: rgb(125, 180, 162);
+  margin-left: 140px;
+  color:white;
+  cursor: pointer;
+
+}
+#innercontainer img{
+  width:100vw;
+  height:550px;
+  
+  /* background-size: cover; */
+  /* text-align: center; */
+}
+#innercontent{
+  position: absolute;
+  margin:-400px 0px 0px 400px;
+  z-index: 1;
+  /* width:100vw; */
+  /* height:500px; */
+}
+#innercontent #head{
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 80px;
+  font-family: cursive;
+  color:white;
+  
+}
+#inputfieldofhome{
+  display:flex;
+  width:750px;
+  height:48px;
+  background-color: white;
+  color:black;
+  margin-top: 10px;
+  border-radius: 13px;
+  /* opacity: 0.8; */
+  /* padding:2px 2px 2px 2px; */
+}
+#inputfieldofhome #searchicon{
+  width:40px;
+  height:42px;
+  text-align: center;
+  /* background-color: antiquewhite; */
+  padding:12px 0px 5px 5px;
+  cursor: pointer;
+
+
+}
+#searchicon ion-icon{
+  font-size: 21px;
+  font-weight: bold;
+  color:rgb(183, 182, 182);
+
+}
+#sendicon{
+  cursor: pointer;
+  width:40px;
+  height:42px;
+  text-align: center;
+  /* background-color: antiquewhite; */
+  padding:12px 0px 5px 5px;
+}
+#sendicon ion-icon{
+  font-size: 22px;
+}
+#inputfieldofhome input{
+  width:650px;
+  height:35px;
+  margin-right: 10px;
+  border-radius: 5px;
+  outline:none;
+  padding:10px 0px 0px 10px;
+  font-size: 18px;
+}
+#inputfieldofhome input::placeholder{
+  color: grey;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+}
+#inputfieldofhome button{
+  width:65px;
+  height:35px;
+  border-radius: 5px;
+  background-color: blueviolet;
+  color:white;
+  cursor: pointer;
+  padding:0px 7px 0px 7px; 
+}
+#innerbody{
+  background-color:rgb(244, 241, 241);
+  /* height: 400px; */
+  color:black;
+  padding:40px 0px 20px 0px;
+  opacity: 0.8;
+  width:100vw;
+  /* overflow-x: hidden; */
+  /* height:100px; */
+}
+#innerbody img{
+  border-radius: inherit;
+    transition: all 0.8s ease-in-out;
+    animation: roll linear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    /* user-select: none; */
+}
+/* #innerbody img:hover{
+  transform: rotate(1.5deg) scale(1.2);
+} */
+#subscriptioncontainer{
+  margin-top: 60px;
+  /* background-color: beige; */
+/* }
+#coursecontainer{
+  width:1200px;
+  margin:20px 0px 10px 100px;
+  /* overflow-x: hidden; */
+  
+  
+  
+  /* display: flex; */
+}
+
+
+
+
+
+
+
+
+.custom-shape-divider-top-1746412244 {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1746412244 svg {
+    position: relative;
+    display: block;
+    width: calc(163% + 1.3px);
+    height: 230px;
+}
+
+.custom-shape-divider-top-1746412244 .shape-fill {
+    fill:white;
+}
+#footermenus{
+  position: absolute;
+  margin:210px 0px 10px 500px;
+  z-index: 2;
+  color: white;
+  display: flex;
+  /* width:100vw; */
+
+}
+#footermenus div div{
+  cursor: pointer;
+  padding: 10px 10px 10px 10px;
+  font-weight: bold;
+  display: flex;
+}
+
+
+
+
+@keyframes roll {
+  0%{
+    transform: scale(1);
+  }
+  25%{
+    transform: scale(1.02);
+  }
+  50%{
+    transform: scale(1.04);
+  }
+  75%{
+    transform: scale(1.02);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+@keyframes scrolling {
+  from{
+    transform: translateX(0px);
+  }
+  to{
+    transform: translateX(-50px);
+  }
+}
+
+
+@media (max-width:600px)
+{
+  #Nav2 #lists{
+    display:none;
+  }
+  #menulines ion-icon{
+    display:block;
+    cursor: pointer;
+  }
+  #coursemenucontainer{
+    margin-left: 20px;
+  }
+  #innercontent{
+    margin-left: 30px;
+  }
+  #innercontent #head{
+    width:500px;
+  }
+  #innercontent input{
+    width:400px;
+
+  }
+  #inputfieldofhome{
+    width:450px;
+  }
+  #footermenus{
+    margin-left: 100px;
+  }
+
+}
