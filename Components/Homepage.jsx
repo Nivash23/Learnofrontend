@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Innercontainer from "./Innercontainer";
 import Animation from './animation'
+import Logo from '../images/Logo/logo6.png'
 
 function Homepage({setLanguagecode,languagecode,t}) {
   const [coursemenubutstate, setCoursemenubutstate] = useState("Cmbutinactive");
@@ -49,7 +50,7 @@ function Homepage({setLanguagecode,languagecode,t}) {
         </div>
       </div>
       <div id="Nav2">
-        <div id="logo"><img src="../images/logo6.png"></img></div>
+        <div id="logo"><img src={Logo}></img></div>
         <div id="menus">
           <div id="lists">
             {/* <div
