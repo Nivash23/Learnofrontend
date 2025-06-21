@@ -286,14 +286,14 @@ function Innercontainer({setPagelangmenubutstate,setCoursemenubutstate}) {
             <div className="coursepoints">{t("m2")}</div>
             <div className="coursepoints">{t("m3")}</div>
           </div>
-          <div className="courseimg">
+          <div className="courseimg" onClick={()=>{navigate('/courses/Googleform')}}>
             <img src={mongodbimg}></img>
           </div>
         </div> 
     </div>
         <div style={{display:"flex",justifyContent:"center"}}>
         <div class="freecourses">
-          <div className="courseimg">
+          <div className="courseimg" onClick={()=>{navigate('/courses/Googleform')}}>
             <img src={Digitalimg}></img>
           </div>
           <div style={{
@@ -332,7 +332,7 @@ function Innercontainer({setPagelangmenubutstate,setCoursemenubutstate}) {
               📈 Real-world datasets and projects
             </div>
           </div>
-          <div className="courseimg">
+          <div className="courseimg" onClick={()=>{navigate('/courses/Googleform')}}>
             <img src={Datascienceimg}></img>
           </div>
         </div>
