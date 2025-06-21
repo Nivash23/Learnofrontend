@@ -12,7 +12,7 @@ import { useTranslation } from 'react-i18next';
 // import Reactjscourse from "../Components/Reactjscourse";
 // import Pythoncourse from "../Components/Pythoncourse";
 // import Mongodbcourse from "../Components/Mongodbcourse";
-import Googleform from "../Components/googleform";
+import Googleform from "../Components/Googleform";
 import ErrorComponent from "../Components/ErrorComponent";
 import { createBrowserRouter, Outlet } from "react-router-dom";
 // import { useContext } from "react";
