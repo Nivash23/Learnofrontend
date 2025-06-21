@@ -1,5 +1,5 @@
 import React from 'react'
-import Subscribecoursecard from './subscribecoursecard'
+import Subscribecoursecard from './Subscribecoursecard'
 
 import digitalmarketimg from '../images/Courses/selected/dm (5).avif'
 

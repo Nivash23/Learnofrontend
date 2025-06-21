@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link,useOutletContext } from "react-router-dom";
 import Innercontainer from "./Innercontainer";
-import Animation from './animation'
+// import Animation from './animation'
 import Logo from '../images/Logo/logo blck.png'
 import { useContext } from "react";
 import Datas from "../Utils/Datas";
