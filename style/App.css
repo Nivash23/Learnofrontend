@@ -1,6 +1,6 @@
 .block{
-  width:450px;
-  height:450px;
+  width:520px;
+  height:520px;
   border-radius: 15px;
    margin-left: 80px;
    overflow: hidden;
@@ -8,9 +8,12 @@
   background-color:transparent;
   animation: appear linear;
   animation-timeline: view();
-  animation-range:entry 0% cover 40%;
-  box-shadow:5px 5px 120px hsl(207, 4%, 54%),-5px -5px 120px hsl(207, 4%, 54%);
+  animation-range:entry 0% cover 50%;
+  /* box-shadow:3px 3px 8px hsl(205, 8%, 71%),-3px -3px 8px hsl(205, 8%, 71%); */
+
+  /* box-shadow:5px 5px 15px hsl(205, 8%, 71%),-5px -5px 15px hsl(207, 4%, 54%); */
 }
+
 
 .block1{
   width:450px;
@@ -22,22 +25,95 @@
   background-color:transparent;
   animation: appear linear;
   animation-timeline: view();
-  animation-range:entry 0% cover 40%;
+  animation-range:entry 0% cover 50%;
   /* box-shadow:5px 5px 10px grey; */
 }
+#scrollingmsg{
+  width:300px;
+  height:120px;
+  background-color: rgb(223, 224, 224);
+  position: absolute;
+  z-index: 3;
+  margin:-340px 0px 0px 600px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+}
+#scrollingarrow{
+  width:40px;
+  height:60px;
+  background-color:rgb(223, 224, 224) ;
+  position: absolute;
+  margin:-220px 0px 0px 750px;
+  z-index: 1;
+}
+#scrollingarrow1{
+  z-index: 1;
+  width:0px;
+  height:0px;
+  /* background-color:rgb(223, 224, 224) ; */
+  position: absolute;
+  margin:-160px 0px 0px 750px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 25px solid rgb(223, 224, 224);
+  
+}
+#scrollarrcontainer{
+  margin-top: -40px;
+  position: absolute;
+  animation:arrowdirection linear;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  z-index: 1;
+  /* background-color: rgb(185, 220, 231); */
+}
+.SDinactive{
+  #scrollarrcontainer{
+    display: none;
+  }
+  #scrollingmsg{
+    display: none;
+  }
+}
+.SDactive{
+  #scrollarrcontainer{
+    display: block;
+  }
+  #scrollingmsg{
+    display: block;
+  }
+}
+
 #courselist{
   display: flex;
   width:1200px;
-  height:180px;
+  height:380px;
   background-color:hsl(229, 96%, 29%);
   margin:40px 0px 10px 150px;
   overflow: hidden;
   padding:5px 10px 10px 10px;
   border-radius: 8px;
+  box-shadow:2px 2px 10px hsl(210, 12%, 36%),2px -2px 20px hsl(207, 10%, 39%) ;
+
+}
+.coursehtitle{
+  color:rgb(234, 8, 8);
+  font-size: 35px;
+  width:100px;
+  margin:10px 0px 10px 120px;
+  font-weight: bold;
+  font-family:'Times New Roman', Times, serif;
+  font-style: oblique;
+  
+}
+.coursepoints{
+  margin-top: 10px;
+  margin-bottom: 8px;
 }
 #courselist:hover{
   .paid{
-    animation-play-state: paused;
+    animation-play-state:paused;
   }
 }
 /* #courselist:hover{
@@ -50,8 +126,9 @@
   border:2px solid hsl(210, 17%, 75%);
   color:tomato;
   text-align: center;
-  height:150px;
-  flex:0 0 250px;
+  height:350px;
+  /* width:200px; */
+  flex:0 0 300px;
   background-color: rgba(216, 201, 198, 0.8);
   margin:10px 20px 10px 20px;
   animation:scroll linear;
@@ -66,25 +143,58 @@
   box-shadow:2px 2px 10px hsl(210, 12%, 36%),2px -2px 20px hsl(207, 10%, 39%) ;
 }
 
+/* This is for new subscription */
+
+#coursecontainer{
+  width:1100px;
+  margin-left: 210px;
+  /* display: flex; */
+  /* background-color: aquamarine; */
+
+}
+
 #fadeeffectinsubhead{
   width:20px;
+  /* display: flex;
+  justify-content: center; */
   height:18px;
-  background-color: rgb(230, 233, 232);
+  background-color: rgb(243, 241, 241);
   position: absolute;
-  margin:-25px 0px 0px 150px;
-  opacity: 0.4;
+  margin:-75px 0px 0px 680px;
+  opacity: 0.5;
   box-shadow:35px 5px 120px hsl(207, 4%, 54%),-35px -5px 120px hsl(207, 4%, 54%) ;
   animation:fadeeffect linear;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
+ animation-duration: 1.8s;
+ animation-iteration-count: infinite;
 }
+#formcontainer{
+  width:300px;
+  height:400px;
+  margin-left: 500px;
+  background-color: azure;
+}
+
+
 @keyframes fadeeffect {
   0%{
     transform: translateX(0px);
   }
   100%{
-    transform: translateX(200px);
+    transform: translateX(130px);
   }
+}
+
+@keyframes arrowdirection {
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(20px);
+  }
+  100%{
+    transform: translateY(30px);
+  }
+  
 }
 @keyframes scroll {
   0%{
@@ -110,11 +220,67 @@
 @keyframes appear{
   from{
     opacity: 0;
-    scale: 0.5;
+    scale: 0.1;
+
   }
   to{
     opacity: 1;
     scale: 1;
+    
+  
+
     /* width:500px; */
+  }
+}
+
+@media (max-width:600px)
+{
+  #coursecontainer{
+    width:100vw;
+    margin-left: 0px;
+    /* background-color: aquamarine; */
+    overflow: hidden;
+  
+  }
+  #scrollingmsg{
+    margin-left: 100px;
+  }
+  #scrollingarrow{
+    margin-left: 250px;
+  }
+  #scrollingarrow1{
+    margin-left: 250px;
+  }
+  #fadeeffectinsubhead{
+    margin-left: 160px;
+  }
+}
+@media (min-width:600px) and (max-width:800px)
+{
+  #coursecontainer{
+    margin-left: 0px;
+    width:100vw;
+    /* justify-content: center; */
+    text-align: center;
+    
+  }
+  #scrollingmsg{
+    margin-left: 150px;
+  }
+  #scrollingarrow{
+    margin-left: 300px;
+  }
+  #scrollingarrow1{
+    margin-left: 300px;
+  }
+  #fadeeffectinsubhead{
+    margin-left: 300px;
+  }
+}
+@media (min-width:800px) and (max-width:1150px)
+{
+  #coursecontainer{
+    margin-left: 10px;
+    width:100vw;
   }
 }

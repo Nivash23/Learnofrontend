@@ -1,24 +1,37 @@
 import React, { useEffect, useRef, useState } from "react";
 import Footer from "./Footer";
-import { Link } from "react-router-dom";
-import '../style/App.css'
+import { Link, useNavigate } from "react-router-dom";
+import "../style/App.css";
 import Paidcourses from "./paidcourses";
 
-import Reactimg from '../images/Courses/react.png'
-import Nodejsimg from '../images/Courses/nodejs.png'
-import mongodbimg from '../images/Courses/mongodb.png'
-import Digitalimg from '../images/Courses/Digital-free.png'
-import pythonimg from '../images/Courses/Python.webp'
-import Datascienceimg from '../images/Courses/datascience-free.png'
+import bannerimage from "../images/Courses/banner8.webp";
+import v1 from "../images/Courses/selected/lv_0_20250516153348.webm";
+import v2 from "../images/Courses/v2.mp4";
+// import i2 from '..//images/'
 
+import Reactimg from "../images/Courses/selected/reactjs.avif";
+import aiimg from "../images/Courses/selected/ai (3).avif";
+import javaimg from "../images/Courses/selected/java (2).avif";
+import sqlimg from "../images/Courses/selected/Sql (2).avif";
+import Nodejsimg from "../images/Courses/selected/node js (2).avif";
+import mongodbimg from "../images/Courses/mongodbimg.avif";
+import Digitalimg from "../images/Courses/selected/dm (5).avif";
+import pythonimg from "../images/Courses/selected/python.avif";
+import Datascienceimg from "../images/Courses/selected/ds (2).avif";
+import UpdatedSubscription from "./UpdatedSubscription";
+import Datas from "../Utils/Datas";
+import { useContext } from "react";
+import { useOutletContext } from "react-router-dom";
 
-function Innercontainer({t}) {
+function Innercontainer({setPagelangmenubutstate,setCoursemenubutstate}) {
   let courses = ["Python", "Web Development", "Java", "FullStack Development"];
   // let fontfamlies = ['sans', 'cursive', 'sans-serif'];
   // const [inputcoursefont, setInputcoursefont] = useState(fontfamlies[0]);
   const [inputcourse, setInputcourse] = useState(courses[0]);
-
-  
+  // const { setSelectedcourse, SelectedCourse } = useContext(Datas);
+  const { t, selectedcourse, setSelectedcourse } = useOutletContext();
+  const [scrolldirection, setScrolldirection] = useState("SDactive");
+  const navigate = useNavigate();
 
   const Searchcoursehandler = async () => {
     let count = 0;
@@ -41,17 +54,34 @@ function Innercontainer({t}) {
       Searchcoursehandler();
     }, 20000);
   }, []);
+  setTimeout(() => {
+    setScrolldirection("SDinactive");
+  }, 5000);
 
   return (
     <div>
-      <div id="innercontainer">
-        <img  src="https://img.freepik.com/free-photo/portrait-asian-woman-sitting-with-laptop-bench-park-listening-music-with-wireless_1258-199096.jpg?ga=GA1.1.842890486.1746420084&semt=ais_hybrid&w=740"></img>
+      <div id="innercontainer" onClick={() => {
+        setPagelangmenubutstate('PLmbutinactive');
+        setCoursemenubutstate('Cmbutinactive')
+      }}>
+        {/* <img src={bannerimage}></img> */}
+        <video  src={v1} autoPlay loop muted />
       </div>
-      <div id="innercontent">
-        {/* <div id="head">Your AI Tutor, Anytime, Anywhere </div> */}
-        <div id="welcomemsg" style={{ fontSize: "20px", fontWeight: "bold", fontFamily: "cursive", color: "white", margin: "0px 0px 20px 10px" }}>{t('Welcomemsg')}
+      {/* <div id="innercontent">
+        
+        <div
+          id="welcomemsg"
+          style={{
+            fontSize: "20px",
+            fontWeight: "bold",
+            fontFamily: "cursive",
+            color: "white",
+            margin: "0px 0px 20px 10px",
+          }}
+        >
+          {t("Welcomemsg")}
         </div>
-        <div id="head" >{t('headtextinimg')} </div>
+        <div id="head">{t("headtextinimg")} </div>
         <div
           style={{
             fontWeight: "bold",
@@ -59,15 +89,15 @@ function Innercontainer({t}) {
             color: "white",
             fontFamily: "cursive",
             opacity: "1.5",
-            marginLeft:"10px"
+            marginLeft: "10px",
           }}
         >
-          I Want To Learn {" "}
+          I Want To Learn{" "}
           <span
             style={{
               color: "white",
               fontSize: "22px",
-            fontFamily: "cursive",
+              fontFamily: "cursive",
 
               // fontStyle: "italic",
               // fontFamily: "cursive",
@@ -76,184 +106,246 @@ function Innercontainer({t}) {
             {inputcourse}
           </span>{" "}
         </div>
-        {/* <div>#LearnWithAI #DigitalLearning</div> */}
+       
         <div id="inputfieldofhome">
           <div id="searchicon">
             <ion-icon name="search"></ion-icon>
           </div>
           <div>
-            <input type="text" id="searchbar" placeholder="Search The Courses"></input>
+            <input
+              type="text"
+              id="searchbar"
+              placeholder="Search The Courses"
+            ></input>
           </div>
           <div id="sendicon">
-             <ion-icon name="send"></ion-icon>
+            <ion-icon name="send"></ion-icon>
           </div>
-          {/* <div><button type="button">Search</button></div> */}
+          
         </div>
       </div>
+      <div class={scrolldirection}>
+        <div id="scrollingmsg">
+          <div style={{ width: "180px", margin: "20px 0px 10px 50px" }}>
+            Scroll Down To Access your Free Courses
+          </div>
+        </div>
+
+        <div id="scrollarrcontainer">
+          <div id="scrollingarrow"></div>
+          <div id="scrollingarrow1"></div>
+        </div>
+      </div> */}
+
       <div id="innerbody">
-        <div class="row">
-          <div style={{ padding: "0px 30px 10px 30px", textAlign: "center" }} class="col">
-            <div class="block1">
+        <div style={{display:"flex",justifyContent:"center",backgroundColor:"rgb(206, 206, 206)"}}>
 
-            <div style={{ width: "100%", margin: "60px 0px 10px 0px" }}  >
-             
-              {t('coursedesc1')}
-            </div>
-            <button type="button" style={{textAlign:"center",borderRadius:"10px",padding:"8px 8px 8px 8px",backgroundColor:"blue",color:"white"}}>Learn Marketting</button>
-            </div>
-          </div>
-          <div class="col" style={{ padding: "0px 30px 10px 30px",textAlign:"center" }}>
-            <div class="block" style={{border:"2.5px solid hsl(133, 3.60%, 48.40%)"}}>
-              <img
-                src={Digitalimg}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  borderRadius: "10px",
-                }}
-              ></img>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col" style={{textAlign:"center"}}>
-            <div class="block" style={{border:"2.5px solid hsl(133, 3.60%, 48.40%)"}}>
-              <img
-                src={Datascienceimg}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  // marginLeft: "80px",
-                  borderRadius: "10px",
-                }}
-              ></img>
-            </div>
-          </div>
-          <div class="col" style={{ textAlign: "center" }}>
-            <div class="block1">
-
-            <div style={{ width: "100%", margin: "60px 0px 10px 40px" }}>
+        <div class="freecourses" >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+                alignItems: "center",
+              // textAlign:"initial"
+          
+              }}
             
-              {t('coursedesc2')}
-            </div>
-            <button type="button" style={{textAlign:"center",borderRadius:"10px",padding:"8px 8px 8px 8px",backgroundColor:"blue",color:"white"}}>Learn DataScience</button>
-            </div>
+          >
+            <div className="coursepoints">🧩 Component-based architecture.</div>
+            <div className="coursepoints">🔄 Seamless state management.</div>
+            <div className="coursepoints">💼 Build production-ready UIs.</div>
           </div>
-        </div>
-        <div class="row">
-          <div style={{ padding: "0px 30px 10px 30px", textAlign: "center" }} class="col">
-            <div class="block1">
-
-            <div style={{ width: "100%", margin: "60px 0px 10px 0px" }}>
-             
-              {t('coursedesc1')}
-            </div>
-            <button type="button" style={{textAlign:"center",borderRadius:"10px",padding:"8px 8px 8px 8px",backgroundColor:"blue",color:"white"}}>Learn Python</button>
-            </div>
-          </div>
-          <div class="col" style={{ padding: "0px 30px 10px 30px",textAlign:"center" }}>
-            <div class="block" style={{border:"2.5px solid hsl(133, 3.60%, 48.40%)"}}>
-              <img
-                src={pythonimg}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  // marginLeft: "80px",
-                  borderRadius: "10px",
+          <div className="courseimg" onClick={()=>{navigate('/courses/Googleform')}}>
+            <img
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                  alignItems: "center",
+                  cursor:"pointer"
+                
                 }}
-              ></img>
-            </div>
+                
+              src={aiimg}
+            ></img>
           </div>
         </div>
-        <div class="row">
-          <div class="col" style={{textAlign:"center"}}>
-            <div class="block" style={{border:"2.5px solid hsl(131, 4.40%, 49.20%)"}}>
-              <img
-                src={Reactimg}
-                style={{
-                 width: "100%",
-                  height: "100%",
-                  // marginLeft: "80px",
-                  borderRadius: "10px",
+        </div>
+        <div style={{display:"flex",justifyContent:"center"}}>
+        <div class="freecourses">
+          <div className="courseimg" onClick={()=>{navigate('/courses/Googleform')}}>
+            <img src={pythonimg} ></img>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+                alignItems: "center",
               
-                }}
-              ></img>
+            }}
+          >
+            <div className="coursepoints">
+              🧠 Easy to learn, powerful in use
             </div>
-          </div>
-          <div class="col" style={{ textAlign: "center" }}>
-            <div class="block1">
-
-            <div style={{ width: "100%", margin: "60px 0px 10px 0px" }}>
-            
-              {t('coursedesc2')}
+            <div className="coursepoints">
+              🔧 Build scripts, tools, and automations
             </div>
-            <button type="button" style={{textAlign:"center",borderRadius:"10px",padding:"8px 8px 8px 8px",backgroundColor:"blue",color:"white"}}>Learn ReactJS</button>
-          </div>
-            </div>
-        </div>
-        <div class="row">
-          <div style={{ padding: "0px 30px 10px 30px", textAlign: "center" }} class="col">
-            <div class="block1">
-
-            <div style={{ width: "100%", margin: "60px 0px 10px 0px" }}>
-             
-              {t('coursedesc1')}
-            </div>
-           <button type="button" style={{textAlign:"center",borderRadius:"10px",padding:"8px 8px 8px 8px",backgroundColor:"blue",color:"white"}}>Learn MongoDB</button>
-          </div>
-            </div>
-          <div class="col" style={{ padding: "0px 30px 10px 30px",textAlign:"center"}}>
-            <div class="block" style={{border:"2.5px solid hsl(129, 9.70%, 61.80%)"}}>
-              <img
-                src={mongodbimg}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  // marginLeft: "80px",
-                  borderRadius: "10px",
-                }}
-              ></img>
+            <div className="coursepoints">
+              📊 Gateway to AI, ML, and Data Science
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col" style={{ textAlign: "center" }}>
-            <Link to="/courses/Nodejs/">
-            
-            <div class="block" style={{border:"2.5px solid hsl(129, 3.00%, 46.10%)"}}>
-              <img
-                src={Nodejsimg}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  // marginLeft: "80px",
-                  borderRadius: "10px",
-              
-                }}
-              ></img>
-            </div>
-            </Link>
+    </div>
+        <div style={{display:"flex",justifyContent:"center",background:"linear-gradient(to bottom right,rgb(185, 220, 231),white)"}}>
+        <div class="freecourses">
+          <div style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+          
+            }}>
+            <div className="coursepoints">🧩 Component-based architecture.</div>
+            <div className="coursepoints">🔄 Seamless state management.</div>
+            <div className="coursepoints">💼 Build production-ready UIs.</div>
           </div>
-          <div class="col" style={{ textAlign: "center" }}>
-            <div class="block1">
-
-            <div style={{ width: "100%", margin: "60px 0px 10px 0px" }}>
-            
-              {t('coursedesc2')}
-            </div>
-            <Link to="/courses/Nodejs/"><button type="button" style={{textAlign:"center",borderRadius:"10px",padding:"8px 8px 8px 8px",backgroundColor:"blue",color:"white"}}>Learn NodeJS</button></Link>
+          <div className="courseimg" onClick={()=>{navigate('/courses/Googleform')}}>
+            <img src={Reactimg}></img>
           </div>
+        </div>
+    </div>
+        <div style={{display:"flex",justifyContent:"center"}}>
+        <div class="freecourses">
+          <div className="courseimg" onClick={()=>{navigate('/courses/Googleform')}}>
+            <img src={Nodejsimg}></img>
+          </div>
+          <div style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+          
+            }}>
+            <div className="coursepoints">{t("N1")}</div>
+            <div className="coursepoints">{t("N2")}</div>
+            <div className="coursepoints">{t("N3")}</div>
+          </div>
+        </div>
+    </div>
+        <div style={{display:"flex",justifyContent:"center",background:"linear-gradient(to bottom right,#F8E7F6,white)"}}>
+        <div class="freecourses">
+          <div style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+          
+            }}>
+            <div class="coursepoints">💼 Industry-standard for backend</div>
+            <div class="coursepoints">🔐 Secure and object-oriented</div>
+            <div class="coursepoints">
+              🤖 Used in banking, automation, Android
             </div>
+          </div>
+          <div className="courseimg" onClick={()=>{navigate('/courses/Googleform')}}>
+            <img src={javaimg}></img>
+          </div>
+        </div>  
+    </div>
+        <div style={{display:"flex",justifyContent:"center"}}>
+        <div class="freecourses">
+          <div className="courseimg" onClick={()=>{navigate('/courses/Googleform')}}>
+            <img src={sqlimg}></img>
+          </div>
+          <div style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+          
+            }}>
+            <div class="coursepoints">🧮 Write complex SQL queries</div>
+            <div class="coursepoints">🔄 Perform CRUD operations and joins</div>
+            <div class="coursepoints">
+              📊 Use SQL for analytics and reporting
+            </div>
+          </div>
+        </div>
+    </div>
+        <div style={{display:"flex",justifyContent:"center",background:"linear-gradient(to right,orange,white)"}}>
+        <div class="freecourses">
+          <div style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+          
+            }}>
+            <div className="coursepoints">{t("m1")}</div>
+            <div className="coursepoints">{t("m2")}</div>
+            <div className="coursepoints">{t("m3")}</div>
+          </div>
+          <div className="courseimg">
+            <img src={mongodbimg}></img>
+          </div>
+        </div> 
+    </div>
+        <div style={{display:"flex",justifyContent:"center"}}>
+        <div class="freecourses">
+          <div className="courseimg">
+            <img src={Digitalimg}></img>
+          </div>
+          <div style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+          
+            }}>
+            <div class="coursepoints">📢 Learn SEO, SEM, and Analytics</div>
+            <div class="coursepoints">
+              📱 Run real campaigns across platforms
+            </div>
+            <div class="coursepoints">
+              💼 Build your digital marketing portfolio
+            </div>
+          </div>
+        </div> 
+    </div>
+        <div style={{display:"flex",justifyContent:"center",background:"linear-gradient(to right,pink,white)"}}>
+        <div class="freecourses">
+          <div style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+          
+            }}>
+            <div className="coursepoints">
+              📊 Data wrangling, analysis, and visualization
+            </div>
+            <div className="coursepoints">
+              🤖 Machine Learning & AI foundations
+            </div>
+            <div className="coursepoints">
+              📈 Real-world datasets and projects
+            </div>
+          </div>
+          <div className="courseimg">
+            <img src={Datascienceimg}></img>
+          </div>
         </div>
       </div>
+    </div>
+ 
       <div>
-        
-        </div>
-           <Paidcourses/>
-        <div>
-          <Footer/>
-        </div>
-      
+        <UpdatedSubscription />
+      </div>
+
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }

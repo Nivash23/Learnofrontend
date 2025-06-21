@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,useOutletContext } from "react-router-dom";
 import Innercontainer from "./Innercontainer";
 import Animation from './animation'
-import Logo from '../images/Logo/logo6.png'
+import Logo from '../images/Logo/logo blck.png'
+import { useContext } from "react";
+import Datas from "../Utils/Datas";
 
-function Homepage({setLanguagecode,languagecode,t}) {
+function Homepage() {
+  const { t, languagecode,setLanguagecode,  setSelectedcourse } = useOutletContext();
+  // const {setLanguagecode}=useContext(Datas)
   const [coursemenubutstate, setCoursemenubutstate] = useState("Cmbutinactive");
   const [pagelangmenubutstate, setPagelangmenubutstate] = useState("PLmbutinactive");
   const [pagelangtext, setPagelangtext] = useState('English');
@@ -15,15 +19,17 @@ function Homepage({setLanguagecode,languagecode,t}) {
 
 
   return (
-    <div>
+    <div id="totalcontainer">
 
     <div id="wholecontainer">
-      <div id="Nav1">
-        
+        <div id="Nav1">
+          <div id="nav1menus">
+
         <div id="langbut" onClick={() => {
             if (pagelangmenubutstate == "PLmbutinactive")
             {
-              setPagelangmenubutstate("PLmbutactive")
+              setPagelangmenubutstate("PLmbutactive");
+              setCoursemenubutstate('Cmbutinactive');
             }
             else {
               setPagelangmenubutstate('PLmbutinactive')
@@ -36,6 +42,8 @@ function Homepage({setLanguagecode,languagecode,t}) {
         </div>
 
         <Link to='/login' style={{textDecoration:"none",color:"black",marginRight:"20px"}} ><div id="logbut">Login</div></Link>
+          </div>
+        
         
       </div>
       <div class={pagelangmenubutstate}>
@@ -43,12 +51,14 @@ function Homepage({setLanguagecode,languagecode,t}) {
 
         <div id="pagelangmenus">
 
-            <div onClick={() => { setLanguagecode('ta'); setPagelangmenubutstate('PLmbutinactive'); setPagelangtext('Tamil')}}>Tamil</div>
             <div onClick={() => { setLanguagecode('en'); setPagelangmenubutstate('PLmbutinactive');setPagelangtext('English') }}>English</div>
+            <div onClick={() => { setLanguagecode('ta'); setPagelangmenubutstate('PLmbutinactive'); setPagelangtext('Tamil')}}>Tamil</div>
         </div>
-         <div id="sharpdesignPagelangmenu"></div>
+         {/* <div id="sharpdesignPagelangmenu"></div> */}
         </div>
-      </div>
+        </div>
+        <div id="wholenav2">
+
       <div id="Nav2">
         <div id="logo"><img src={Logo}></img></div>
         <div id="menus">
@@ -56,75 +66,50 @@ function Homepage({setLanguagecode,languagecode,t}) {
             {/* <div
               
               
-            >
+              >
               Language
-            </div> */}
+              </div> */}
 
+              <Link to="/learning" style={{ textDecoration: "none", color: "black" }}><div id="stlearnbut">Learning Process</div></Link>
             <div
               id="coursemenubut"
               onClick={() => {
                 if (coursemenubutstate == "Cmbutinactive") {
                   setCoursemenubutstate("Cmbutactive");
+                  setPagelangmenubutstate('PLmbutinactive')
                 } else {
                   setCoursemenubutstate("Cmbutinactive");
                 }
               }}>Courses</div>
             {/* <div>Phrasebooks</div> */}
             <div>Learno blogs</div>
-            <Link to="/Internships" style={{textDecoration:"none", color:"white"}}><div>Internships</div></Link>
+            <Link to="/Internships" style={{textDecoration:"none", color:"black"}}><div>Internships</div></Link>
           </div>
 
-          <Link to="/learning" style={{ textDecoration: "none", color: "black" }}><div id="stlearnbut">Start Learning</div></Link>
           <div id="menulines"><ion-icon name="menu" ></ion-icon></div>
         </div>
           </div>
+        </div>
       <div class={coursemenubutstate}>
         <div id="coursemenucontainer">
-          <div class="row">
-            <div class="col">
+          
+            
               <div>Artificial Intelligence</div>
               <div>FE- Web Development</div>
               <div>BE- Web Development</div>
               <div>Cyber Security</div>
               <div style={{borderBottom:"none"}}>Data Science</div>
-              {/* <div>Java</div> */}
-              {/* <div>Item 6</div>
-              <div>Item 7</div>
-              <div>Item 8</div>
-              <div>Item 9</div>
-              <div>Item 10</div> */}
-            </div>
-            {/* <div class="col-md-3">
-              <div>Item 11</div>
-              <div>Item 12</div>
-              <div>Item 13</div>
-              <div>Item 14</div>
-              <div>Item 15</div>
-              <div>Item 16</div>
-              <div>Item 17</div>
-              <div>Item 18</div>
-              <div>Item 19</div>
-              <div>Item 20</div>
-            </div>
-            <div class="col-md-3">
-              <div>Item 21</div>
-              <div>Item 22</div>
-              <div>Item 23</div>
-              <div>Item 24</div>
-              <div>Item 25</div>
-              <div>Item 26</div>
-              <div>Item 27</div>
-              <div>Item 28</div>
-              <div>Item 29</div>
-              <div>Item 30</div>
-            </div> */}
-          </div>
-          <div id="coursedesign"></div>
+              
+            
+
+          
+          {/* <div id="coursedesign"></div> */}
         </div>
       </div>
-    </div>
+      </div>
+      
       <div>
-        <Innercontainer t={t } />
+        <Innercontainer t={t } setSelectedcourse={setSelectedcourse} setPagelangmenubutstate={setPagelangmenubutstate} setCoursemenubutstate={setCoursemenubutstate} />
       </div>
 
     </div>

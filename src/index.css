@@ -13,20 +13,28 @@
 #wholecontainer{
   width:100vw;
   height:100%;
-  background-color: rgb(63, 61, 61);
+  /* background-color: rgb(92, 30, 30); */
   color:white;
   /* overflow-y: scroll; */
-  overflow-x: hidden;
+  overflow: hidden;
+  /* margin-left: 110px; */
   /* overflow-x: hidden; */
 }
 #Nav1{
-  display:flex;
-  background-color: rgb(222, 221, 214);
   padding:8px 10px 8px 10px;
-  justify-content: end;
+  /* justify-content:end; */
   color:black;
+
+  /* background-color: white; */
+  background-color: rgb(230, 229, 229);
+
 }
-#Nav1 > div{
+#nav1menus{
+  display:flex;
+  justify-content: flex-end;
+  margin-right: 180px;
+}
+#nav1menus > div{
   font-size: 15px;
   font-weight:bold;
   margin-right:25px;
@@ -34,9 +42,12 @@
   cursor:pointer;
 }
 #logbut{
-  border:1px solid black;
+  /* border:1px solid black; */
   border-radius: 5px;
-  padding:3px 3px 3px 3px;
+  font-weight: bold;
+  color:white;
+  background-color: blue;
+  padding:3px 10px 3px 10px;
 }
 #langbut{
   display:flex;
@@ -44,30 +55,34 @@
 #pagelangmenus{
   width:110px;
   position: absolute;
-  border-radius: 5px;
-  height:68px;
-  background-color: rgb(244, 192, 3);
-  color:black;
+  border-radius: 7px;
+  height:70px;
+  /* font-size: 16px; */
+  background-color: white;
   /* padding:10px 10px 10px 10px; */
-  margin-left: 1320px;  
+  margin:-10px 0px 0px 1130px;  
   text-align: center;
+  font-weight: bold;
 }
-#sharpdesignPagelangmenu{
+/* #sharpdesignPagelangmenu{
   width:0px;
   height:0px;
   border-right: 10px solid transparent;
   border-left: 10px solid transparent;
-  border-bottom: 20px solid rgb(244, 192, 3) ;
+  border-bottom: 20px solid rgb(216, 222, 133) ;
   position: absolute;
-  margin:-17px 0px 0px 1370px;
-}
+  margin:-17px 0px 0px 1180px;
+} */
 #pagelangmenus div{
   padding:5px 5px 5px 5px;
   width:100%;
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
   cursor: pointer;
   color:black;
   /* background-color: aquamarine; */
+}
+#pagelangmenus div:hover{
+  background-color: rgb(246, 245, 245);
 }
 .PLmbutinactive{
   #pagelangbox{
@@ -87,11 +102,20 @@
   justify-content: space-between;
   padding:10px 10px 20px 10px;
   height:75px;
-  background-color: rgb(74, 74, 74);
+  /* background-color: rgb(230, 229, 229); */
+  background-color: white;
   font-size: 20px;
+  color: black;
+  width:1255px;
+}
+#wholenav2{
+  display: flex;
+  justify-content: center;
+
 }
 #logo{
-  margin:10px 0px 0px 30px;
+  margin:10px 0px 0px 10px;
+  flex: 3;
 }
 #logo img{
   width:130px;
@@ -100,8 +124,11 @@
 }
 #Nav2 #menus{
   display: flex;
+  /* flex: 4; */
   padding-top: 5px;
   font-weight: bold;
+  color:black;
+  /* margin-right: 160px; */
 
   /* justify-content: space-around; */
 }
@@ -109,29 +136,33 @@
   font-size: 22px;
   margin:10px 20px 0px 10px;
   display: none;
+  color:black;
 }
 #menus #lists{
   display:flex;
+  flex:4;
   margin-right: 30px;
 
 }
 #lists div{
   padding:10px 10px 5px 10px;
   cursor: pointer;
+  flex: 1;
+  min-width: 150px;
 }
-#stlearnbut{
+/* #stlearnbut{
   padding:10px 35px 15px 35px;
   margin-right: 20px;
   text-align: center;
-  background-color:rgb(244, 192, 3) ;
+  background-color:rgb(244, 192, 3);
   border-radius: 10px;
   color:black;
   cursor: pointer;
   height:45px;
   font-weight: bold;
-  /* opacity: 0.8; */
   
-}
+  
+} */
 .Cmbutinactive{
   #coursemenucontainer{
     display: none;
@@ -145,40 +176,43 @@
 #coursemenucontainer{
   width:200px;
   height:222px;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   color:black;
-  margin:10px 0px 0px 850px;
+  margin:-10px 0px 0px 850px;
   /* padding:10px 20px 10px 20px; */
   text-align: center;
   border-radius: 10px;
-  background-color:rgb(224, 220, 204);
+  background-color:white;
   z-index: 3;
   position: absolute;
 }
-#coursemenucontainer .col div{
+#coursemenucontainer div{
    padding:10px 10px 10px 10px;
    cursor: pointer;
-   border-bottom: 1px solid black;
+   /* border-bottom: 1px solid black; */
 }
-#coursemenucontainer .col div:active{
+#coursemenucontainer div:active{
   color:aliceblue;
   /* background-color: azure; */
 
 }
+#coursemenucontainer div:hover{
+  background-color: rgb(248, 248, 248);
+}
 /* #coursemenucontainer .col{
   margin-left: 0px;
 } */
-#coursedesign{
+/* #coursedesign{
   width:0;
   height:0;
-  /* background-color:rgb(244, 192, 3); */
+
   position: absolute;
   margin:-245px 0px 0px 90px;
   border-left:12px solid transparent;
   border-right:12px solid transparent;
-  border-bottom:25px solid rgb(224, 220,204);
-  /* z-index: 1; */
-}
+  border-bottom:25px solid rgb(200, 201, 196);
+
+} */
 #coursemenubut:active{
      color:rgb(145, 142, 142);
 }
@@ -187,6 +221,7 @@
   margin:0px;
   border:0px;
 }
+
 #logincontainer{
   
   background-color: rgb(221, 222, 223);
@@ -298,9 +333,17 @@
   cursor: pointer;
 
 }
-#innercontainer img{
+#innercontainer{
+  display: flex;
+  justify-content: center;
+}
+#innercontainer video{
   width:100vw;
-  height:550px;
+  /* width:900px; */
+  /* height:600px; */
+  border-radius: 7px;
+  /* margin-left: 120px; */
+  /* background-color: bisque; */
   
   /* background-size: cover; */
   /* text-align: center; */
@@ -312,12 +355,18 @@
   /* width:100vw; */
   /* height:500px; */
 }
+#welcomemsg{
+  text-shadow: 2px 2px 3px rgb(157, 157, 156),-2px -2px 3px rgb(157, 157, 156);
+
+}
 #innercontent #head{
-  font-size: 48px;
+  font-size: 40px;
   font-weight: bold;
   margin-bottom: 80px;
   font-family: cursive;
   color:white;
+  text-shadow: 2px 2px 3px rgb(157, 157, 156),-2px -2px 3px rgb(157, 157, 156);
+
   
 }
 #inputfieldofhome{
@@ -326,8 +375,10 @@
   height:48px;
   background-color: white;
   color:black;
-  margin-top: 10px;
+  margin:10px 0px 0px 0px;
   border-radius: 13px;
+  box-shadow:4px 4px 10px hsl(210, 12%, 36%),4px -4px 20px hsl(207, 10%, 39%) ;
+
   /* opacity: 0.8; */
   /* padding:2px 2px 2px 2px; */
 }
@@ -352,11 +403,20 @@
   width:40px;
   height:42px;
   text-align: center;
+  
   /* background-color: antiquewhite; */
   padding:12px 0px 5px 5px;
 }
 #sendicon ion-icon{
   font-size: 22px;
+  color:black;
+  filter:drop-shadow(2px 2px 4px rgb(105, 104, 104));
+  filter:drop-shadow(-2px -2px 4px rgb(105, 104, 104));
+
+}
+#sendicon:hover{
+  animation: shake 0.8s;
+  animation-iteration-count: 1;
 }
 #inputfieldofhome input{
   width:650px;
@@ -383,21 +443,52 @@
   padding:0px 7px 0px 7px; 
 }
 #innerbody{
-  background-color:rgb(244, 241, 241);
+  /* background-color:rgb(164, 121, 121); */
   /* height: 400px; */
   color:black;
-  padding:40px 0px 20px 0px;
-  opacity: 0.8;
+  padding:0px 0px 20px 0px;
+  /* opacity: 0.8; */
   width:100vw;
+  overflow: hidden;
+  /* margin-left: 110px; */
   /* overflow-x: hidden; */
   /* height:100px; */
 }
+.courseimg{
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.freecourses{
+  /* margin-left: 70px; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+  padding:10px 0px 20px 0px;
+  width:1255px;
+  /* margin-left: 100px; */
+  /* justify-items: center; */
+  
+  /* gap:rem; */
+  
+}
+.freecourses div{
+  min-width: 250px;
+
+}
+#innerbody .row{
+  margin-bottom: 40px;
+  padding:20px 0px 20px 0px;
+  border-radius: 10px;
+}
+
 #innerbody img{
   border-radius: inherit;
     transition: all 0.8s ease-in-out;
     animation: roll linear;
     animation-duration: 5s;
     animation-iteration-count: infinite;
+    width:100%;
+    cursor: pointer;
     /* user-select: none; */
 }
 /* #innerbody img:hover{
@@ -416,6 +507,88 @@
   
   /* display: flex; */
 }
+#Googleformpagenav{
+  display: flex;
+  background-color: rgb(74, 74, 74);
+  height:55px;
+  width:100vw;
+  padding:10px 20px 10px 20px;
+  color: white;
+}
+#Googleformpage{
+  padding:0px;
+  margin:0px;
+  border:0px;
+}
+#Googleformcontainer{
+  
+  background-color: rgb(221, 222, 223);
+  height:100vh;
+  width:100vw;
+  /* padding:10px 20px 10px 20px; */
+  /* background-color: ; */
+}
+#Googleformbox{
+  margin:100px 0px 0px 500px;
+  width:420px;
+  height:450px;
+  background-color: rgb(242, 242, 240);
+  padding:20px 20px 20px 20px;
+  border-radius: 7px;
+  box-shadow:3px 3px 8px hsl(205, 8%, 71%),-3px -3px 8px hsl(205, 8%, 71%);
+  /* text-align: center; */
+
+}
+#Googleformhomepagebut{
+  margin-left: 1300px;
+}
+#Googleformcontainer button{
+  margin:30px 0px 10px 20px;
+  width:350px;
+  height:40px;
+  padding:5px 5px 5px 5px;
+  background-color: blue;
+  color:whitesmoke;
+  font-weight: bold;
+  border-radius: 8px;
+}
+#Googleformcontainer #radiobuts{
+  display: flex;
+}
+/* #Googleformbox input{
+  width:300px;
+  height:35px;
+  padding:3px 3px 3px 3px;
+} */
+/* #Googleformbox #email{
+  display: flex;
+} */
+.ginput input{
+  width:300px;
+  height:35px;
+  padding:3px 3px 3px 3px;
+}
+#Ginputscontainer{
+  margin-top: 20px;
+}
+#Ginputscontainer div{
+  margin-top: 10px;
+}
+#Googleformbox label{
+  font-weight: bold;
+}
+
+
+/* #Googleformbox #interested{
+  display: flex;
+}
+#Googleformbox #mobile{
+  display: flex;
+}
+#Googleformbox #radiobuts{
+  display: flex;
+} */
+
 
 
 
@@ -428,7 +601,7 @@
     /* position: absolute; */
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     overflow: hidden;
     line-height: 0;
 }
@@ -467,18 +640,40 @@
     transform: scale(1);
   }
   25%{
-    transform: scale(1.02);
+    transform: scale(1.01);
   }
   50%{
-    transform: scale(1.04);
+    transform: scale(1.02);
   }
   75%{
-    transform: scale(1.02);
+    transform: scale(1.01);
   }
   100%{
     transform: scale(1);
   }
 }
+
+@keyframes shake {
+  0%{
+    transform: translateX(0);
+  }
+  20%{
+    transform: translateX(-2px);
+  }
+  40%{
+    transform: translateX(2px);
+  }
+  60%{
+    transform: translateX(-2px);
+  }
+  80%{
+    transform: translateX(2px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+
 @keyframes scrolling {
   from{
     transform: translateX(0px);
@@ -494,6 +689,21 @@
   #Nav2 #lists{
     display:none;
   }
+  #wholecontainer{
+    margin-left: 0px;
+    width:100vw;
+  }
+  #logo{
+    margin-left: 10px;
+  }
+  #stlearnbut{
+    display: none;
+  }
+  
+  #innercontainer img{
+    margin-left: 0px;
+    width:100vw;
+  }
   #menulines ion-icon{
     display:block;
     cursor: pointer;
@@ -505,17 +715,115 @@
     margin-left: 30px;
   }
   #innercontent #head{
-    width:500px;
+    width:300px;
+    font-size: 1.2rem;
   }
   #innercontent input{
-    width:400px;
-
+    width:15rem;
+    
   }
   #inputfieldofhome{
-    width:450px;
+    margin-top: 50px;
+    width:21rem;
   }
+  .freecourses div{
+    max-width: 500px;
+    
+
+    
+  }
+  #pagelangmenus{
+    margin-left: 100px;
+  }
+  #sharpdesignPagelangmenu{
+    margin-left:140px ;
+  }
+  /* .freecourses{
+    margin-left: 0px;
+  } */
+  /* #inputfieldofhome{
+    width:450px;
+  } */
   #footermenus{
     margin-left: 100px;
   }
+  /* #wholebody{
+    background-color: bisque;
+    overflow: hidden;
+    width:600px;
+  } */
 
+}
+@media (min-width:600px) and (max-width:800px)
+{
+   #innercontainer img{
+    width:100vw;
+   }
+   #innercontent{
+    margin-left: 80px;
+   }
+   #logo{
+    margin-left: 10px;
+    flex: 3;
+   }
+   #stlearnbut{
+    display: none;
+   }
+   
+  #innercontent #head{
+    width:400px;
+    font-size: 1.3rem;
+    /* margin-bottom: 10px; */
+  }
+  #innercontent input{
+    width:25rem;
+
+  }
+  #inputfieldofhome{
+    width:31rem;
+    margin-top: 80px;
+  }
+  #pagelangmenus{
+    margin-left: 370px;
+  }
+  #sharpdesignPagelangmenu{
+    margin-left:140px ;
+  }
+ #coursemenucontainer{
+   margin-left: 130px;
+ }
+ #footermenus{
+  margin-left: 120px;
+ } 
+
+}
+@media (min-width:800px) and (max-width:1150px)
+{
+  #innercontent{
+    margin-left: 150px;
+
+  }
+  #innercontainer{
+    width:100vw;
+  }
+  #innercontent #head{
+    width:520px;
+    font-size: 1.5rem;
+  }
+  #innercontent input{
+    width:35rem;
+
+  }
+  #inputfieldofhome{
+    width:40rem;
+  }
+  #logo{
+    margin-left: 10px;
+  }
+  #footermenus{
+    margin-left: 140px;
+   } 
+   /* #Nav2{
+    justify-content: space-between;
+   } */
 }

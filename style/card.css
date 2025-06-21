@@ -1,0 +1,19 @@
+#cardcontainer{
+    width:350px;
+    height:500px;
+    background-color:rgba(241, 241, 241, 0.808);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    /* box-shadow:2px 2px 0px hsl(210, 3%, 88%),-2px -2px 60px hsl(202, 7%, 70%) ; */
+    
+    /* opacity: 0.5; */
+    
+
+}
+#cardcontainer:hover{
+    box-shadow:3px -10px 60px hsl(216, 5%, 78%) ;
+    transform: rotateX(10deg);
+    /* transform: rotateY(-10deg); */
+}
