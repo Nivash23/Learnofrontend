@@ -20,11 +20,13 @@ function Loginpage() {
     <div id="loginpage" class={loginpagestate}>
       <div id="logincontainer">
         <div id="loginpagenav">
-          <div style={{color:"rgb(244, 192, 3)",fontWeight:"bold"}} >Lsaii</div>
-          <Link to="/" style={{textDecoration:"none",color:"black"}}>
+          <div style={{color:"rgb(244, 192, 3)",fontWeight:"bold",flex:"6"}} >Lsaii</div>
+          <Link to="/" style={{textDecoration:"none",color:"black",flex:"1"}}>
             <div id="loghomepagebut" style={{color:"white"}}>Home</div>
           </Link>
         </div>
+        <div style={{display:"flex",justifyContent:"center"}}>
+
         <div id="loginbox">
           <div style={{marginLeft:"140px",fontSize:"22px",fontWeight:"bold"}}>LOGIN</div>
           <div>
@@ -89,6 +91,7 @@ function Loginpage() {
         </div>
         </div>
       </div>
+        </div>
     </div>
   );
 }

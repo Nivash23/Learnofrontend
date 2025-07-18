@@ -70,10 +70,7 @@ function App() {
 
       <Outlet context={{t,languagecode,setLanguagecode,setSelectedcourse,selectedcourse}} />
      
-      
-        
-     
-      
+
     </div>
   );
 }

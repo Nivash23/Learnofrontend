@@ -26,7 +26,8 @@
   color:black;
 
   /* background-color: white; */
-  background-color: rgb(230, 229, 229);
+  background-color: white;
+
 
 }
 #nav1menus{
@@ -103,13 +104,14 @@
   padding:10px 10px 20px 10px;
   height:75px;
   /* background-color: rgb(230, 229, 229); */
-  background-color: white;
   font-size: 20px;
   color: black;
+  
   width:1255px;
 }
 #wholenav2{
   display: flex;
+  background-color: rgb(240, 239, 239);
   justify-content: center;
 
 }
@@ -150,6 +152,12 @@
   flex: 1;
   min-width: 150px;
 }
+#lists div:hover{
+  /* text-shadow: 5px 5px 5px rgb(red); */
+    color:rgb(122, 122, 122);
+    text-shadow:2px 2px 0px hsl(210, 3%, 88%),-2px -2px 60px hsl(202, 7%, 70%) ;
+
+}
 /* #stlearnbut{
   padding:10px 35px 15px 35px;
   margin-right: 20px;
@@ -175,7 +183,7 @@
 }
 #coursemenucontainer{
   width:200px;
-  height:222px;
+  height:220px;
   /* background-color: aliceblue; */
   color:black;
   margin:-10px 0px 0px 850px;
@@ -231,7 +239,7 @@
   /* background-color: ; */
 }
 #loginbox{
-   margin:100px 0px 0px 500px;
+   margin:50px 0px 0px 0px;
    width:380px;
    height:450px;
    background-color: rgb(242, 242, 240);
@@ -239,13 +247,13 @@
    border-radius: 7px;
 }
 #Registerbox{
-   margin:20px 0px 0px 500px;
+   margin:20px 0px 0px 0px;
    width:380px;
-   height:580px;
+   height:520px;
    background-color: rgb(242, 242, 240);
    padding:20px 20px 20px 20px;
    border-radius: 7px;
-   position: absolute;
+   /* position: absolute; */
 }
 .Regpageinactive{
   #Registerbox{
@@ -255,6 +263,8 @@
 .Regpageactive{
   #Registerbox{
     display: block;
+    /* display: flex;
+    justify-content: center; */
   }
 }
 .Loginpageinactive{
@@ -288,9 +298,9 @@
 #Loginpageswitch{
   margin:0px 0px 10px 50px;
 }
-#loghomepagebut{
+/* #loghomepagebut{
   margin-left: 1300px;
-}
+} */
 #loginbox input{
   width:300px;
   height:35px;
@@ -457,6 +467,7 @@
 .courseimg{
   border-radius: 7px;
   overflow: hidden;
+  height: 500px;
 }
 
 .freecourses{
@@ -473,6 +484,7 @@
 }
 .freecourses div{
   min-width: 250px;
+  
 
 }
 #innerbody .row{
@@ -488,6 +500,7 @@
     animation-duration: 5s;
     animation-iteration-count: infinite;
     width:100%;
+    height: 100%;
     cursor: pointer;
     /* user-select: none; */
 }
@@ -514,6 +527,7 @@
   width:100vw;
   padding:10px 20px 10px 20px;
   color: white;
+
 }
 #Googleformpage{
   padding:0px;
@@ -522,16 +536,20 @@
 }
 #Googleformcontainer{
   
-  background-color: rgb(221, 222, 223);
   height:100vh;
+  background-color: rgb(221, 222, 223);
   width:100vw;
+  overflow: hidden;
+
+
   /* padding:10px 20px 10px 20px; */
   /* background-color: ; */
 }
+
 #Googleformbox{
-  margin:100px 0px 0px 500px;
+  margin:50px 0px 0px 0px;
   width:420px;
-  height:450px;
+  height:480px;
   background-color: rgb(242, 242, 240);
   padding:20px 20px 20px 20px;
   border-radius: 7px;
@@ -539,9 +557,12 @@
   /* text-align: center; */
 
 }
-#Googleformhomepagebut{
-  margin-left: 1300px;
+/* #googleformlogo{
+  flex: 2;
 }
+#Googleformhomepagebut{
+  flex: 1;
+} */
 #Googleformcontainer button{
   margin:30px 0px 10px 20px;
   width:350px;
@@ -567,6 +588,7 @@
   width:300px;
   height:35px;
   padding:3px 3px 3px 3px;
+  outline: none;
 }
 #Ginputscontainer{
   margin-top: 20px;
@@ -576,6 +598,14 @@
 }
 #Googleformbox label{
   font-weight: bold;
+}
+#Googleboxcontainer{
+  display: flex;
+  justify-content: center;
+  /* align-items: center */
+  /* margin-top: 40px; */
+  height:100vh;
+  background-color: rgb(221, 222, 223);
 }
 
 
@@ -683,6 +713,13 @@
   }
 }
 
+@media (min-width:380px) and (max-width:450px)
+{
+  #Googleboxcontainer{
+    width:100%;
+  }
+}
+
 
 @media (max-width:600px)
 {
@@ -692,6 +729,9 @@
   #wholecontainer{
     margin-left: 0px;
     width:100vw;
+  }
+  #nav1menus{
+    margin-right: 20px;
   }
   #logo{
     margin-left: 10px;
@@ -709,7 +749,7 @@
     cursor: pointer;
   }
   #coursemenucontainer{
-    margin-left: 20px;
+    margin-left: 50px;
   }
   #innercontent{
     margin-left: 30px;
@@ -733,11 +773,11 @@
     
   }
   #pagelangmenus{
-    margin-left: 100px;
+    margin-left: 150px;
   }
-  #sharpdesignPagelangmenu{
+  /* #sharpdesignPagelangmenu{
     margin-left:140px ;
-  }
+  } */
   /* .freecourses{
     margin-left: 0px;
   } */

@@ -12,6 +12,7 @@ function Homepage() {
   const [coursemenubutstate, setCoursemenubutstate] = useState("Cmbutinactive");
   const [pagelangmenubutstate, setPagelangmenubutstate] = useState("PLmbutinactive");
   const [pagelangtext, setPagelangtext] = useState('English');
+  const [menulinemenudisplay, setMenulinemenudisplay] = useState('none');
 
  
   
@@ -41,7 +42,7 @@ function Homepage() {
           </div>
         </div>
 
-        <Link to='/login' style={{textDecoration:"none",color:"black",marginRight:"20px"}} ><div id="logbut">Login</div></Link>
+        {/* <Link to='/login' style={{textDecoration:"none",color:"black",marginRight:"20px"}} ><div id="logbut">Login</div></Link> */}
           </div>
         
         
@@ -63,12 +64,7 @@ function Homepage() {
         <div id="logo"><img src={Logo}></img></div>
         <div id="menus">
           <div id="lists">
-            {/* <div
-              
-              
-              >
-              Language
-              </div> */}
+            
 
               <Link to="/learning" style={{ textDecoration: "none", color: "black" }}><div id="stlearnbut">Learning Process</div></Link>
             <div
@@ -86,7 +82,15 @@ function Homepage() {
             <Link to="/Internships" style={{textDecoration:"none", color:"black"}}><div>Internships</div></Link>
           </div>
 
-          <div id="menulines"><ion-icon name="menu" ></ion-icon></div>
+              <div id="menulines"><ion-icon name="menu" onClick={() => {
+                if (menulinemenudisplay == "none")
+                {
+                  setMenulinemenudisplay('block')
+                }
+                else {
+                  setMenulinemenudisplay('none')
+                }
+          }} ></ion-icon></div>
         </div>
           </div>
         </div>
@@ -105,11 +109,27 @@ function Homepage() {
           
           {/* <div id="coursedesign"></div> */}
         </div>
-      </div>
+        </div>
+        <div style={{display:"flex",justifyContent:"end"}}>
+
+        <div id="menulinemenu" style={{display:menulinemenudisplay}}>
+            <div onClick={() => {
+              if (coursemenubutstate == "Cmbutinactive") {
+                setCoursemenubutstate("Cmbutactive");
+                setPagelangmenubutstate('PLmbutinactive')
+              } else {
+                setCoursemenubutstate("Cmbutinactive");
+              }
+              
+          }}>Courses</div>
+          <div>Blogs</div>
+          <div>Process</div>
+        </div>
+        </div>
       </div>
       
       <div>
-        <Innercontainer t={t } setSelectedcourse={setSelectedcourse} setPagelangmenubutstate={setPagelangmenubutstate} setCoursemenubutstate={setCoursemenubutstate} />
+        <Innercontainer t={t } setSelectedcourse={setSelectedcourse} setPagelangmenubutstate={setPagelangmenubutstate} setCoursemenubutstate={setCoursemenubutstate} setMenulinemenudisplay={setMenulinemenudisplay} />
       </div>
 
     </div>
