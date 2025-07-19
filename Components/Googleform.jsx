@@ -21,14 +21,14 @@ function Googleform() {
     e.preventDefault();
     
 
-    const formurl = 'https://docs.google.com/forms/d/e/1FAIpQLSfyDjmQJn5HFJGaIRayyWF3Dx9bIexPClTWyRGeCyLJ9mm-yg/formResponse';
+    const formurl = 'https://docs.google.com/forms/d/e/1FAIpQLSd7J95C_Q4rUdjvJFjJjPtANLS6KbbnM1NFmlQjqzuL2MZUcA/formResponse';
     const formbody = new FormData();
 
-    formbody.append('entry.1169104402', formdata.Email);
-    formbody.append('entry.1690489574', formdata.Name);
-    formbody.append('entry.1502312109', formdata.Phoneno);
-    formbody.append('entry.2109634359', formdata.Interested);
-    formbody.append('entry.207286917', formdata.Course);
+    formbody.append('entry.1813402317', formdata.Email);
+    formbody.append('entry.487020002', formdata.Name);
+    formbody.append('entry.1009365397', formdata.Phoneno);
+    formbody.append('entry.1604308027', formdata.Interested);
+    formbody.append('entry.135642963', formdata.Course);
     
 
     fetch(formurl, {
