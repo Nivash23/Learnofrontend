@@ -66,7 +66,7 @@ function Homepage() {
           <div id="lists">
             
 
-              <Link to="/learning" style={{ textDecoration: "none", color: "black" }}><div id="stlearnbut">Learning Process</div></Link>
+              <Link to="/learning" style={{ textDecoration: "none", color: "black" }}><div style={{display:"flex",justifyContent:"center"}}>Learning Process</div></Link>
             <div
               id="coursemenubut"
               onClick={() => {
@@ -76,10 +76,10 @@ function Homepage() {
                 } else {
                   setCoursemenubutstate("Cmbutinactive");
                 }
-              }}>Courses</div>
+              }} style={{display:"flex",justifyContent:"center"}}>Courses</div>
             {/* <div>Phrasebooks</div> */}
-            <div>Learno blogs</div>
-            <Link to="/Internships" style={{textDecoration:"none", color:"black"}}><div>Internships</div></Link>
+            <div style={{display:"flex",justifyContent:"center"}}>Learno blogs</div>
+            <Link to="/Internships" style={{textDecoration:"none", color:"black"}}><div style={{display:"flex",justifyContent:"center"}}>Internships</div></Link>
           </div>
 
               <div id="menulines"><ion-icon name="menu" onClick={() => {

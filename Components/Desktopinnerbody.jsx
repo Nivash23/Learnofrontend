@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, useOutletContext } from "react-router-dom";
-import v1 from "../images/Courses/selected/lv_0_20250516153348.webm";
+import v1 from "../images/Courses/selected/Introvideo.mp4";
 import Reactimg from "../images/Courses/selected/reactjs.avif";
 import aiimg from "../images/Courses/selected/ai (3).avif";
 import javaimg from "../images/Courses/selected/java (2).avif";
@@ -23,14 +23,14 @@ function Desktopinnerbody({
   const { t, selectedcourse, setSelectedcourse } = useOutletContext();
 
   return (
-    <div>
-      <div
-        id="innercontainer"
-        onClick={() => {
+    <div onClick={() => {
           setPagelangmenubutstate("PLmbutinactive");
           setCoursemenubutstate("Cmbutinactive");
           setMenulinemenudisplay("none");
-        }}
+        }}>
+      <div
+        id="innercontainer"
+        
       >
         {/* <img src={bannerimage}></img> */}
         <video src={v1} autoPlay loop muted />
@@ -57,7 +57,7 @@ function Desktopinnerbody({
                   margin: "20px 0px 40px 0px",
                 }}
               >
-                Learn <span style={{ color: "GrayText" }}> AI</span>
+                Learn <span style={{ color: "GrayText" }}> AI/ML</span>
               </div>
               <div
                 style={{

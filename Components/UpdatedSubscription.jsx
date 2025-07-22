@@ -21,24 +21,24 @@ function UpdatedSubscription() {
               
           <div class="row">
                   <div class="col-md-4">
-                      <Subscribecoursecard src={Fullstackimg } name="FullStack Development" price="499" originalprice="2999" />
+                      <Subscribecoursecard src={Fullstackimg } name="FullStack Development" price="499" originalprice="220000" />
               </div>
                   <div class="col-md-4">
-                      <Subscribecoursecard src={Frontendimg } name="Frontend Development" price="600" originalprice="999" />
+                      <Subscribecoursecard src={Frontendimg } name="Frontend Development" price="9999" originalprice="20000" />
               </div>
                   <div class="col-md-4">
-                      <Subscribecoursecard src={cybersecurityimg } name="Cyber Security" price="899" originalprice="1999" />
+                      <Subscribecoursecard src={cybersecurityimg } name="Cyber Security" price="9999" originalprice="20000" />
               </div>
           </div>
           <div class="row" style={{marginTop:"100px"}}>
                   <div class="col-md-4">
-                      <Subscribecoursecard src={datascienceimg } name="Datascience" price="499" originalprice="2999"/>
+                      <Subscribecoursecard src={datascienceimg } name="Datascience" price="9999" originalprice="20000"/>
               </div>
                   <div class="col-md-4">
-                      <Subscribecoursecard src={digitalmarketimg} name="DigitalMarketing" price="1200" originalprice="5000"/>
+                      <Subscribecoursecard src={digitalmarketimg} name="DigitalMarketing" price="9999" originalprice="20000"/>
               </div>
                   <div class="col-md-4">
-                      <Subscribecoursecard src={javaimg} name="Java Development" price="500" originalprice="2499" />
+                      <Subscribecoursecard src={javaimg} name="Java Development" price="9999" originalprice="20000" />
               </div>
           </div>
           </div>

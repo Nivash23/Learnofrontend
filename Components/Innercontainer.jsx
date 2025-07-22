@@ -67,7 +67,7 @@ function Innercontainer({setPagelangmenubutstate,setCoursemenubutstate,setMenuli
   return (
     <div>
       {
-        ismobile ? <Mobileinnerbody/> : <Desktopinnerbody/>
+        ismobile ? <Mobileinnerbody setPagelangmenubutstate={setPagelangmenubutstate} setCoursemenubutstate={setCoursemenubutstate} setMenulinemenudisplay={setMenulinemenudisplay}/> : <Desktopinnerbody setPagelangmenubutstate={setPagelangmenubutstate} setCoursemenubutstate={setCoursemenubutstate} setMenulinemenudisplay={setMenulinemenudisplay} />
       }
     </div>
     
